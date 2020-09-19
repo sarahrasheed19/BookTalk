@@ -1,10 +1,14 @@
 from flask import Flask, render_template, redirect, url_for, request
-# Route for handling the login page logic
-app = Flask(__name__)
-@app.route('/')
-def home():
-    return "Welcome to Home Page!"
+from flask_sqlalchemy import SQLAlchemy
+import settings
 
+app = Flask(__name__)
+
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_DATABASE_URI'] = settings.PSQL_URI
+db = SQLAlchemy(app)
+
+# Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -14,4 +18,3 @@ def login():
         else:
             return redirect(url_for('home'))
     return render_template('index.html', error=error)
-
