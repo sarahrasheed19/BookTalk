@@ -6,19 +6,19 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 from settings import MYSQL_URI
-from app import db
+from app import app, db
 
 engine = create_engine(MYSQL_URI)
-Session = sessionmker(bind=engine)
+Session = sessionmaker(bind=engine)
 Base = declarative_base()
 
 role_users = db.Table('role_users',
-    db.Column('user_id', db.Integer(), db.ForeignKey('User.id')),
-    db.Column('role_id', db.Integer(), db.ForeignKey('Role.id')),
+    db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
+    db.Column('role_id', db.Integer(), db.ForeignKey('role.id')),
     extend_existing = True)
 
 Posts = db.Table('Posts',
-    db.Column('user_id', db.Integer(), db.ForeignKey('User.id')),
+    db.Column('user_id', db.Integer(), db.ForeignKey('user.id')),
     db.Column('book_isbn', db.String(30), db.ForeignKey('Book.ISBN')))
 
 class Role(db.Model, RoleMixin):
