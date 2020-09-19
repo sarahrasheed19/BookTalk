@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BOOK - BookTalk</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Fonts -->
+    <link
+      href="../static/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../static/vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="../static/css/bt.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-md navbar-dark fixed-top"
+      style="background-color: black"
+    >
+      <a class="navbar-brand" href="#">BookTalk</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >My Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-light mt-2 mt-md-0">
+          Sign Out
+        </button>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="subhead d-flex" style="height: 70vh; color:white;">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <img class="img-fluid rounded" src="../static/img/just-mercy.jpg" style="max-height: 50vh;"></img>
+          </div>
+          <div class="col-md-6">
+            <h1 class="mb-1">Just Mercy</h1>
+            <h3 class="lead">Bryan Stevenson</h3>
+          </br>
+          <p>A powerful true story about the potential for mercy to redeem us, and a clarion call to fix our broken system of justice—from one of the most brilliant and influential lawyers of our time.</p>
+        </br>
+        <button type="button" class="btn btn-danger">Leave Club</button>    
+        </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card text-white mb-3" style="background-color: black">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h1 class=""><i class="fas fa-bookmark" style="color:white;"></i>&nbsp;&nbsp;&nbsp;Page 104</h1>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-outline-light btn-lg btn-block">Update My Bookmark</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-white mb-3" style="background-color: black">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h1 class=""><i class="fas fa-tags" style="color:white;"></i>&nbsp;&nbsp;&nbsp;$7.87</h1>
+                  </div>
+                  <div class="col-md-6">
+                    <button type="button" class="btn btn-outline-light btn-lg btn-block">Purchase Book</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card bg-light mb-3" style="">
+              <div class="card-header">E-Reader</div>
+              <div class="card-body">
+                <!-- PDF here -->
+                <iframe src="../static/pdf/just_mercy.pdf" style="width: 100%; height: 34vw; border: 0px; margin:0;"></iframe>
+                <a href="../static/pdf/just_mercy.pdf"><button type="button" class="btn btn-outline-info btn-lg btn-block">View E-Book</button></a>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+            <div class="card bg-info text-white mb-3" >
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-2 my-auto">
+                    <h1><i class="fas fa-video" style="color:white;"></i></h1>
+                  </div>
+                  <div class="col-md-6">
+                    <h1 class="">Book Chat</h1>
+                    <p>Saturdays at 7:00pm ET</p>
+                  </div>
+                  <div class="col-md-4">
+                    <button type="button" class="btn btn-outline-light btn-lg btn-block" data-toggle="modal"
+                    data-target="#joinMeetingModal">Join Meeting</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-light mb-3" style="">
+              <div class="card-header">Forums</div>
+              <div class="card-body">
+                <!-- Forums here -->
+                <iframe src="bookclub_forums.html" style="width: 100%; height: 35vw; border: 0px; margin:0;"></iframe>
+                <form>
+                  <textarea type="text" class="form-control" id="postInput" placeholder="Post something..."></textarea>
+                  <button type="submit" class="btn btn-primary btn-block" style="margin-top: 1vh;">Post</button>  
+                </form>           
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Bookclubs -->
+    <section
+      class="content-section bg-primary text-white text-center"
+      id="bookclubs"
+    >
+      <div class="container">
+        <div class="content-section-heading">
+          <h2 class="mb-5">Also check out...</h2>
+        </div>
+        <div class="row" style="color: black">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Just Mercy"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A powerful, bold true story about the potential for mercy to
+                  redeem us, and a clarion call to fix America’s broken system
+                  of justice — from one of the most brilliant and influential
+                  lawyers of our time.
+                </p>
+                <a href="#" class="btn btn-primary">Join Bookclub!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Just Mercy"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A powerful, bold true story about the potential for mercy to
+                  redeem us, and a clarion call to fix America’s broken system
+                  of justice — from one of the most brilliant and influential
+                  lawyers of our time.
+                </p>
+                <a href="#" class="btn btn-primary">Join Bookclub!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Just Mercy"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A powerful, bold true story about the potential for mercy to
+                  redeem us, and a clarion call to fix America’s broken system
+                  of justice — from one of the most brilliant and influential
+                  lawyers of our time.
+                </p>
+                <a href="#" class="btn btn-primary">Join Bookclub!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div
+      class="modal fade"
+      id="joinMeetingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="joinMeetingModalTitle"
+      aria-hidden="true"
+    >
+
+    <!-- Google Meet Modal-->
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="joinMeetingModalTitle">Join in on this club's meetings!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+           <h5><u>Meeting times:</u> Saturdays at 7:00pm ET</h5>
+           <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Goole Meet ID</div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="123-456-789" disabled>
+           </div>
+           <div class="d-flex justify-content-center">
+            <img class="img-fluid" src="../static/img/google_meet.png" style="width:40%; height: 40%; margin-top: 2vh; margin-bottom: 1vh;"></img>  
+
+           </div>
+           <button type="button" class="btn btn-success btn-block" style="margin-top: 2vh;">Join Meeting</button>
+           <button type="button" class="btn btn-outline-success btn-block" style="margin-top: 1vh;">Add to Google Calendar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">Copyright &copy; BookTalk 2020</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/bt.min.js"></script>
+  </body>
+</html>
