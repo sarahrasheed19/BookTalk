@@ -108,6 +108,13 @@
                   >
                     Sign in
                   </button>
+                  <button
+                    class="btn btn-lg btn-light btn-block text-uppercase"
+                    data-toggle="modal"
+                    data-target="#signUpModal"
+                  >
+                    Join the club!
+                  </button>
                   <hr class="my-4" />
                   <button
                     class="btn btn-lg btn-facebook btn-block text-uppercase"
@@ -134,7 +141,7 @@
               We offer hundreds of virtual bookclubs for you to join. From
               classic fiction to modern nonfiction, we've got it all!
             </p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services"
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#bookclubs"
               >Featured Bookclubs</a
             >
           </div>
@@ -213,7 +220,13 @@
       </div>
       <div class="container text-center" style="padding-top: 5rem">
         <h2 class="mb-4">So, what are you waiting for?</h2>
-        <a href="#!" class="btn btn-xl btn-light mr-4">Join now!</a>
+        <a
+          href="#!"
+          class="btn btn-xl btn-light mr-4"
+          data-toggle="modal"
+          data-target="#signUpModal"
+          >Join now!</a
+        >
       </div>
     </section>
 
@@ -223,6 +236,73 @@
         <p class="text-muted small mb-0">Copyright &copy; BookTalk 2020</p>
       </div>
     </footer>
+
+    <!-- Sign up Modal-->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="signUpModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="signUpModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signUpModalTitle">Join the club!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form-signin">
+              <div class="form-label-group">
+                <input
+                  type="email"
+                  id="inputEmail"
+                  class="form-control"
+                  placeholder="Email address"
+                  required
+                  autofocus
+                />
+                <label for="inputEmail">Email address</label>
+              </div>
+
+              <div class="form-label-group">
+                <input
+                  type="password"
+                  id="inputPassword"
+                  class="form-control"
+                  placeholder="Password"
+                  required
+                />
+                <label for="inputPassword">Password</label>
+              </div>
+              <button
+                class="btn btn-lg btn-light btn-block text-uppercase"
+                type="submit"
+              >
+                Create account
+              </button>
+              <hr class="my-4" />
+              <button
+                class="btn btn-lg btn-facebook btn-block text-uppercase"
+                type="submit"
+              >
+                <i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
