@@ -6,7 +6,7 @@ from models import user_datastore, security
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI 
 app.config['SECRET_KEY'] = settings.SECRETKEY
 db = SQLAlchemy(app)
 
