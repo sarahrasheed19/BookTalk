@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+
 from app import db
 
 class User(db.Model):
@@ -19,3 +20,10 @@ class Book(db.Model):
     author = db.Column(db.String(100))
     genre = db.Column(db.String(30))
     tags = db.Column(db.String(200))
+
+class ForumPosts(db.Model):
+    __tablename__ = "ForumPosts"
+
+    postID = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer)
+    ISBN = db.Column(db.String(30))
