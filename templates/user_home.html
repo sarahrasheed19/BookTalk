@@ -9,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>BookTalk - Join online bookclubs now!</title>
+    <title>My Bookclubs - BookTalk</title>
 
     <!-- Bootstrap Core CSS -->
     <link
@@ -39,87 +39,42 @@
 
   <body id="page-top">
     <!-- Navigation -->
-    <a class="menu-toggle rounded" href="#">
-      <i class="fas fa-bars"></i>
-    </a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">BookTalk</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#bookclubs">Our Bookclubs</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#bookclubs">Our Bookclubs</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- Header -->
-    <header class="masthead d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-md-6" style="padding-top: 7rem">
-            <h1 class="mb-1">BookTalk</h1>
-            <h3 class="mb-5" style="color: white">
-              <em>Join Online Bookclubs</em>
-            </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about"
-              >About us</a
+    <nav
+      class="navbar navbar-expand-md navbar-dark fixed-top"
+      style="background-color: black"
+    >
+      <a class="navbar-brand" href="#">BookTalk</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >My Home <span class="sr-only">(current)</span></a
             >
-          </div>
-          <div class="col-md-6">
-            <div class="card card-signin my-5">
-              <div class="card-body">
-                <h5 class="card-title text-center">Sign In</h5>
-                <form class="form-signin">
-                  <div class="form-label-group">
-                    <input
-                      type="email"
-                      id="inputEmail"
-                      class="form-control"
-                      placeholder="Email address"
-                      required
-                      autofocus
-                    />
-                    <label for="inputEmail">Email address</label>
-                  </div>
-
-                  <div class="form-label-group">
-                    <input
-                      type="password"
-                      id="inputPassword"
-                      class="form-control"
-                      placeholder="Password"
-                      required
-                    />
-                    <label for="inputPassword">Password</label>
-                  </div>
-                  <button
-                    class="btn btn-lg btn-primary btn-block text-uppercase"
-                    type="submit"
-                  >
-                    Sign in
-                  </button>
-                  <hr class="my-4" />
-                  <button
-                    class="btn btn-lg btn-facebook btn-block text-uppercase"
-                    type="submit"
-                  >
-                    <i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-light mt-2 mt-md-0">
+          Sign Out
+        </button>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="subhead d-flex">
+      <div class="container my-auto text-center">
+        <h1 class="mb-1">My Bookclubs</h1>
       </div>
       <div class="overlay"></div>
     </header>
@@ -128,15 +83,93 @@
     <section class="content-section bg-light" id="about">
       <div class="container text-center">
         <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h2>Reading with friends has never been easier!</h2>
-            <p class="lead mb-5">
-              We offer hundreds of virtual bookclubs for you to join. From
-              classic fiction to modern nonfiction, we've got it all!
-            </p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services"
-              >Featured Bookclubs</a
-            >
+          <div class="col-sm-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A group dedicated to the discussion of Bryan Stevenson's
+                  <i>Just Mercy</i>.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">32 Members</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Enter bookclub</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A group dedicated to the discussion of Bryan Stevenson's
+                  <i>Just Mercy</i>.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">32 Members</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Enter bookclub</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A group dedicated to the discussion of Bryan Stevenson's
+                  <i>Just Mercy</i>.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">32 Members</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Enter bookclub</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card">
+              <img
+                class="card-img-top"
+                src="../static/img/just-mercy.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Just Mercy</h5>
+                <p class="card-text">
+                  A group dedicated to the discussion of Bryan Stevenson's
+                  <i>Just Mercy</i>.
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">32 Members</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Enter bookclub</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +182,7 @@
     >
       <div class="container">
         <div class="content-section-heading">
-          <h2 class="mb-5">Check out some of our bookclubs!</h2>
+          <h2 class="mb-5">Looking to join more bookclubs?</h2>
         </div>
         <div class="row" style="color: black">
           <div class="col-md-4">
@@ -210,10 +243,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="container text-center" style="padding-top: 5rem">
-        <h2 class="mb-4">So, what are you waiting for?</h2>
-        <a href="#!" class="btn btn-xl btn-light mr-4">Join now!</a>
       </div>
     </section>
 
