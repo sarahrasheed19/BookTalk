@@ -89,14 +89,38 @@ h6 {
   padding: 0;
   color: white;
 }
+
+.subhead {
+  min-height: 15rem;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/bg-masthead.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
   }
+  .subhead {
+    height: 40vh;
+  }
   .masthead h1 {
     font-size: 5.5rem;
   }
+  .subhead h1 {
+    font-size: 3.5rem;
+    color: white;
+  }
 }
+
 #sidebar-wrapper {
   position: fixed;
   z-index: 2;
