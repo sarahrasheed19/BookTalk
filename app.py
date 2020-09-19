@@ -1,11 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_sqlalchemy import SQLAlchemy
-import settings
+from eBookClub import settings
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = settings.PSQL_URI
+app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI
 db = SQLAlchemy(app)
 
 # Route for handling the login page logic
