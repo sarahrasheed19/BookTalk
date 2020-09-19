@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>facebook login code from facebook for developers</title>
+<title>facebook api - developed from tutorial and code on facebook for developers website</title>
 <meta charset="UTF-8">
 </meta>
 </head>
