@@ -16,14 +16,11 @@ security=Security(app,user_datastore)
 
 @app.route('/register', methods=['POST','GET'])
 def register():
-    if request.method=='POST':
-        user_datastore.create_user( email = request.form.get('email') , password = request.form.get('password'))
-        db.session.commit()
-
-
-        return redirect(url_for('home'))
-
-    return render_template('register.html')
+    if request.method=='POST' and 'password' in request.form and 'email' in request.form:
+        email=request.form['email']
+        password=request.form['password']
+        redirect(url_for('login'))
+    return render_template('index.html')
 
 
 # Route for handling the login page logic
@@ -41,3 +38,8 @@ def login():
 
 def home():
     return render_template('user_home.html')
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
