@@ -5,7 +5,7 @@ from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from eBookClub import settings 
+from eBookClub import settings
 
 
 app = Flask(__name__)
