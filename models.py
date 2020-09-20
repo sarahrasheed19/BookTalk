@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_security import Security, SQLAlchemyUserDatastore, UserMixin, RoleMixin
+from flask_security import UserMixin, RoleMixin
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -74,7 +74,3 @@ class ForumPosts(db.Model):
     postID = db.Column(db.Integer, primary_key=True)
     id = db.Column(db.Integer, db.ForeignKey('Posts.user_id'))
     ISBN = db.Column(db.String(30), db.ForeignKey('Posts.book_isbn'))
-
-#setup flask-security
-user_datastore = SQLAlchemyUserDatastore(db, User, Role)
-security = Security(app, user_datastore)
