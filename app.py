@@ -7,7 +7,6 @@ from sqlalchemy.orm import sessionmaker
 
 from eBookClub import settings
 
-
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI
@@ -15,7 +14,7 @@ app.config['SECRET_KEY'] = settings.SECRETKEY
 
 db = SQLAlchemy(app)
 
-engine = create_engine(MYSQL_URI)
+engine = create_engine(settings.MYSQL_URI)
 Session = sessionmaker(bind=engine)
 Base = declarative_base()
 
@@ -85,6 +84,11 @@ class ForumPosts(db.Model):
 # setting up flask-security
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
 
  # Route for handling the login page logic
 @app.route('/login', methods=['GET', 'POST'])
