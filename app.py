@@ -96,9 +96,17 @@ def home():
 @app.route('/registerauth', methods=['POST','GET'])
        # user_datastore.create_user( email = request.form.get('inputEmail') , password = request.form.get('inputPassword'))
        # db.session.commit()
+def register():
+    if request.method == "POST":
+        email = request.form['email']
+        password = request.form['password']
+        register = User(email = email, password = password)
+        db.session.add(register)
+        db.session.commit()
         return redirect('/home')
     return render_template('index.html')
- # Route for handling the login page logic
+ 
+    # Route for handling the login page logic
 @app.route('/loginauth', methods=['GET', 'POST'])
 def login():
     error = None
