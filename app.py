@@ -33,7 +33,8 @@ class Role(db.Model, RoleMixin):
     __table_args__ = {'extend_existing': True}
 
     id = db.Column(db.Integer, db.ForeignKey('role_users.role_id'), primary_key=True)
-    role_name = db.Column(db.String(30), unique=True)description = db.Column(db.String(255))
+    role_name = db.Column(db.String(30), unique=True)
+    description = db.Column(db.String(255))
 
     def __init__(self, role_name, description):
         self.role_name = role_name
@@ -61,7 +62,8 @@ class Book(db.Model):
 
     ISBN = db.Column(db.String(30), primary_key=True)
     title = db.Column(db.String(500))
-    author = db.Column(db.String(100))genre = db.Column(db.String(30))
+    author = db.Column(db.String(100))
+    genre = db.Column(db.String(30))
     tags = db.Column(db.String(200))
     cover = db.Column(db.BLOB)
 
