@@ -76,11 +76,11 @@
             <div class="card card-signin my-5">
               <div class="card-body">
                 <h5 class="card-title text-center">Sign In</h5>
-                <form class="form-signin">
+                <form class="form-signin" action="/loginauth" method="POST">
                   <div class="form-label-group">
                     <input
                       type="email"
-                      id="inputEmail"
+                      name="inputEmail"
                       class="form-control"
                       placeholder="Email address"
                       required
@@ -92,7 +92,7 @@
                   <div class="form-label-group">
                     <input
                       type="password"
-                      id="inputPassword"
+                      name="inputPassword"
                       class="form-control"
                       placeholder="Password"
                       required
@@ -259,7 +259,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="form-signin">
+            <form class="form-signin" action="/registerauth" method="POST">
               <div class="form-label-group">
                 <input
                   type="email"
