@@ -5,8 +5,8 @@ from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from settings import MYSQL_URI
-from app import app, db
+from eBookClub.settings import MYSQL_URI
+from eBookClub import app, db
 
 engine = create_engine(MYSQL_URI)
 Session = sessionmaker(bind=engine)
@@ -75,6 +75,6 @@ class ForumPosts(db.Model):
     id = db.Column(db.Integer, db.ForeignKey('Posts.user_id'))
     ISBN = db.Column(db.String(30), db.ForeignKey('Posts.book_isbn'))
 
-#setup flask-security
+# setting up flask-security
 user_datastore = SQLAlchemyUserDatastore(db, User, Role)
 security = Security(app, user_datastore)
