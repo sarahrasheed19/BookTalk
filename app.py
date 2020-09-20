@@ -93,6 +93,22 @@ def index():
 def home():
     return render_template('user_home.html')
 
+@app.route('/bookclub')
+def bookclub():
+    return render_template('bookclub_home_public.html')
+
+@app.route('/mybookclub')
+def mybookclub():
+    return render_template('bookclub_home_member.html')
+
+@app.route('/settings')
+def settings():
+    return render_template('user_settings.html')
+
+@app.route('/forums')
+def forums():
+    return render_template('bookclub_forums.html')
+
 @app.route('/registerauth', methods=['POST','GET'])
 def register():
     if request.method=='POST':
