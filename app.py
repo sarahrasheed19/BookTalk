@@ -5,8 +5,8 @@ from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from flask.ext.social import Social
-from flask.ext.social.datastore import SQLAlchemyConnectionDatastore
+from flask_social import Social
+from flask_social.datastore import SQLAlchemyConnectionDatastore
 
 from eBookClub import settings
 
