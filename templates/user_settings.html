@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Settings - BookTalk</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Fonts -->
+    <link
+      href="../static/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../static/vendor/simple-line-icons/css/simple-line-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="../static/css/bt.min.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-md navbar-dark fixed-top"
+      style="background-color: black"
+    >
+      <a class="navbar-brand" href="#">BookTalk</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+        aria-controls="navbarCollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-light mt-2 mt-md-0">
+          Sign Out
+        </button>
+      </div>
+    </nav>
+    <!-- Header -->
+    <!-- Header -->
+    <header class="subhead d-flex">
+      <div class="container my-auto text-center">
+        <h1 class="mb-1">Account Settings</h1>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card text-white mb-3" style="background-color: black">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h1 class="">
+                      <i class="fas fa-user" style="color: white"></i
+                      >&nbsp;&nbsp;&nbsp;My Profile
+                    </h1>
+                  </div>
+                  <div class="col-md-6">
+                    <button
+                      type="button"
+                      class="btn btn-outline-light btn-lg btn-block"
+                      data-toggle="modal"
+                      data-target="#myProfileModal"
+                    >
+                      Edit My Info
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card text-white mb-3" style="background-color: black">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h1 class="">
+                      <i class="fas fa-lock" style="color: white"></i
+                      >&nbsp;&nbsp;&nbsp;Security
+                    </h1>
+                  </div>
+                  <div class="col-md-6">
+                    <button
+                      type="button"
+                      class="btn btn-outline-light btn-lg btn-block"
+                      data-toggle="modal"
+                      data-target="#securityModal"
+                    >
+                      Edit Security
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Profile Modal-->
+
+    <div
+      class="modal fade"
+      id="myProfileModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myProfileModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="myProfileMeetingModalTitle">
+              Edit My Profile
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="newEmail">E-Mail</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Current Email"
+                aria-label="email"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="newName">Name</span>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Current Name"
+                aria-label="name"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-success btn-block"
+              style="margin-top: 2vh"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Modal-->
+
+    <div
+      class="modal fade"
+      id="securityModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="securityModalTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="securityModalTitle">
+              Edit My Security
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="newpassword"
+                  >New Password</span
+                >
+              </div>
+              <input
+                type="password"
+                class="form-control"
+                placeholder=""
+                aria-label="email"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn btn-success btn-block"
+              style="margin-top: 2vh"
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">Copyright &copy; BookTalk 2020</p>
+      </div>
+    </footer>
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../static/js/bt.min.js"></script>
+  </body>
+</html>
