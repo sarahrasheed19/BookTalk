@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI
 app.config['SECRET_KEY'] = settings.SECRETKEY
 db = SQLAlchemy(app)
 
-user_datastore=SQLAlchemyUserDatastore(db, 'User', 'Role')
+user_datastore=SQLAlchemyUserDatastore(db, 'user_id', 'role_id')
 security=Security(app,user_datastore)
 
 @app.route('/register', methods=['POST','GET'])
