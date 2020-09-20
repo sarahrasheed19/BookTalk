@@ -94,8 +94,6 @@ def home():
     return render_template('user_home.html')
 
 @app.route('/registerauth', methods=['POST','GET'])
-def register():
-    if request.method=='POST':
        # user_datastore.create_user( email = request.form.get('inputEmail') , password = request.form.get('inputPassword'))
        # db.session.commit()
         return redirect('/home')
