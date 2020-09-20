@@ -5,12 +5,19 @@ from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+from flask.ext.social import Social
+from flask.ext.social.datastore import SQLAlchemyConnectionDatastore
+
 from eBookClub import settings
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = settings.MYSQL_URI
 app.config['SECRET_KEY'] = settings.SECRETKEY
+app.config['SOCIAL_FACEBOOK'] = {
+    'consumer_key': '784325565668062'
+}
+app.config['SECURITY_POST_LOGIN'] = '/profile'
 
 db = SQLAlchemy(app)
 

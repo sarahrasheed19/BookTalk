@@ -38,6 +38,10 @@
   </head>
 
   <body id="page-top">
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=784325565668062&autoLogAppEvents=1" nonce="RYYiEuNK"></script>
+
     <!-- Navigation -->
     <a class="menu-toggle rounded" href="#">
       <i class="fas fa-bars"></i>
@@ -113,12 +117,12 @@
                     Join the club!
                   </button>
                   <hr class="my-4" />
-                  <button
-                    class="btn btn-lg btn-facebook btn-block text-uppercase"
-                    type="submit"
-                  >
-                    <i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook
-                  </button>
+                  <div class="fb-login-button"
+                  align="center"
+                  data-size="large"
+                  data-button-type="login_with"
+                  data-layout="default"
+                  data-auto-logout-link="true" data-use-continue-as="false" data-width=""></div>
                 </form>
               </div>
             </div>
@@ -313,5 +317,9 @@
 
     <!-- Custom scripts for this template -->
     <script src="../static/js/bt.min.js"></script>
+
+    <!-- Facebook Login SDK -->
+    <script src="../static/fbapi.js"></script>
+
   </body>
 </html>
