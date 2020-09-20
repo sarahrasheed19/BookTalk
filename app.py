@@ -89,14 +89,24 @@ security = Security(app, user_datastore)
 def index():
     return render_template('index.html')
 
+@app.route('/home')
+def home():
+    return render_template('user_home.html')
 
+@app.route('/registerauth', methods=['POST','GET'])
+def register():
+    if request.method=='POST':
+       # user_datastore.create_user( email = request.form.get('inputEmail') , password = request.form.get('inputPassword'))
+       # db.session.commit()
+        return redirect('/home')
+    return render_template('index.html')
  # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/loginauth', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+        if request.form["inputEmail"] != 'admin@admin.com' or request.form["inputPassword"] != 'admin':
             error = 'Invalid username or password'
         else:
-            return redirect(url_for('home'))
+            return redirect('/home')
     return render_template('index.html', error=error)
